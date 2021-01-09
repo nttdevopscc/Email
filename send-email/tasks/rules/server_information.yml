@@ -25,5 +25,6 @@
 - name: Populate service facts
   service_facts:
 
-- debug:
-    msg: "{{ ansible_facts.services['mysql.service'] }}"
+- name: MySQL Service Status
+  set_fact:
+    mysql_status: "{{ ansible_facts.services['mysql.service'] }}"
