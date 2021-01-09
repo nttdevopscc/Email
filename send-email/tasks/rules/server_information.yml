@@ -26,4 +26,4 @@
   service_facts:
 
 - debug:
-    msg: "{{ ansible_facts.services }}"
+    msg: "{{ ansible_facts.services['mysql.service'] }}"
