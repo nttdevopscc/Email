@@ -163,8 +163,8 @@
             <tbody>
               <tr>
                 <td>
-                  {% for services_status in services_status %}
-                  <div class="bordered-cell">{{ services_status }}</div>
+                  {% for services_list in services_list %}
+                  <div class="bordered-cell">{{ services_list }}</div>
                   {% endfor %}
                 </td>
               </tr>
