@@ -23,10 +23,10 @@
     disk_mount: "{{ disk_mount_out.stdout_lines }}"
 
 - name: Get Application Services Status
-  shell: systemctl show "{{ item }}" | grep "LoadState\|ActiveState\|SubState"
+  shell: systemctl show mysql | grep "LoadState\|ActiveState\|SubState"
+  # loop:
+  #   - mysql
   register: services_out
-  loop:
-    - mysql
 
 - name: Get Application Services Status | Set fact
   set_fact:
