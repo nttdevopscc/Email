@@ -24,8 +24,6 @@
 
 - name: Populate service facts
   service_facts:
-  register: services_out
 
-- name: Populate service facts | Set fact
-  set_fact:
-    services_list: "{{ services_out.stdout_lines }}"
+- debug:
+    msg: "{{ ansible_facts.services }}"
