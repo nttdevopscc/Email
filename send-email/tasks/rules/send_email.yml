@@ -157,7 +157,7 @@
           <table>
             <thead>
               <tr>
-                <th>Application Services Status</th>
+                <th>MySQL Service Status</th>
               </tr>
             </thead>
             <tbody>

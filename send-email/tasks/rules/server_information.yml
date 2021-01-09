@@ -22,9 +22,10 @@
   set_fact:
     disk_mount: "{{ disk_mount_out.stdout_lines }}"
 
-- name: Populate service facts
-  service_facts:
+- name: Get MySQL service status
+  shell: systemctl status mysql
+  register: mysql_out
 
-- name: MySQL Service Status
+- name: Get MySQL service status | Set fact
   set_fact:
-    mysql_status: "{{ ansible_facts.services['mysql.service'] }}"
+    mysql_status: "{{ mysql_out.stdout_lines }}"
