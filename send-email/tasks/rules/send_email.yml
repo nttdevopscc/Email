@@ -10,6 +10,8 @@
     - /tmp/ntt-logo.PNG
     to:
     - rodel.paco@webserverpage.com
+    - rodel.paco@global.ntt
+    - william.poh@global.ntt
     subject: MySQL Provisioning Report
     body: >-
       <!DOCTYPE html>
