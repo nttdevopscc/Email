@@ -1,0 +1,14 @@
+---
+host_ip: 172.31.2.66
+mysql_user: root
+mysql_password: p@ssw0rd
+dbuser: admin
+dbpass: p@ssw0rd
+dbname:
+  - ihispoc-db01
+  - ihispoc-db02
+  - ihispoc-db03
+email_host: smtp.ionos.com
+email_port: 587
+email_username: ihis.poc@s694078334.onlinehome.us
+email_password: P@ssw0rd@2021
