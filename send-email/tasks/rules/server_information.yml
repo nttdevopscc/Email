@@ -24,9 +24,6 @@
 
 - name: Get Application Services Status
   shell: systemctl show mysql | grep "LoadState\|ActiveState\|SubState"
-  loop:
-    - mysql
-    - apache2
   register: services_out
 
 - name: Get Application Services Status | Set fact

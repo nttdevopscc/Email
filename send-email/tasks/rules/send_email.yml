@@ -9,7 +9,6 @@
     attach:
     - /tmp/ntt-logo.PNG
     to:
-    - rodel.paco@global.ntt
     - rodel.paco@webserverpage.com
     subject: MySQL Provisioning Report
     body: >-
