@@ -131,7 +131,7 @@
             </thead>
             <tbody>
               <tr>
-                <td class="bordered-cell">{{ ansible_interfaces['connection_name'] }}</td>
+                <td class="bordered-cell">{{ ansible_interfaces }}</td>
                 <td class="bordered-cell">{{ ansible_ip_addresses }}</td>
                 <td class="bordered-cell">{{ ansible_interfaces['default_gateway'] }}</td>
               </tr>
