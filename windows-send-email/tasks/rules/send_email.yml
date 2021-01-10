@@ -133,7 +133,7 @@
               <tr>
                 <td class="bordered-cell">{{ ansible_interfaces }}</td>
                 <td class="bordered-cell">{{ ansible_ip_addresses }}</td>
-                <td class="bordered-cell">{{ ansible_interfaces['default_gateway'] }}</td>
+                <td class="bordered-cell">{{ ansible_interfaces }}</td>
               </tr>
             </tbody>
           </table>
