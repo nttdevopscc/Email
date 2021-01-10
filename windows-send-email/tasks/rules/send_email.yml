@@ -99,7 +99,7 @@
             </thead>
             <tbody>
               <tr>
-                <td class="bordered-cell">{{ ansible_distribution }} - {{ ansible_distribution_version }}</td>
+                <td class="bordered-cell">{{ ansible_os_name }}</td>
                 <td class="bordered-cell">{{ ansible_processor_vcpus }}</td>
                 <td class="bordered-cell">{{ ansible_memtotal_mb }}</td>
               </tr>
@@ -108,22 +108,32 @@
           <table>
             <thead>
               <tr>
-                <th>Interface(s)</th>
-                <th>IP Address</th>
-                <th>Subnet Mask</th>
-                <th>Gateway</th>
-                <th>Broadcast</th>
-                <th>Network</th>
+                <th>Windows Domain</th>
+                <th>Domain Role</th>
+                <th>Host FQDN</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="bordered-cell">{{ ansible_default_ipv4['interface'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['address'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['netmask'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['gateway'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['broadcast'] }}</td>
-                <td class="bordered-cell">{{ ansible_default_ipv4['network'] }}</td>
+                <td class="bordered-cell">{{ ansible_windows_domain }}</td>
+                <td class="bordered-cell">{{ ansible_windows_domain_role }}</td>
+                <td class="bordered-cell">{{ ansible_fqdn'] }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>Interface(s)</th>
+                <th>IP Address</th>
+                <th>Gateway</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="bordered-cell">{{ ansible_interfaces['connection_name'] }}</td>
+                <td class="bordered-cell">{{ ansible_ip_addresses }}</td>
+                <td class="bordered-cell">{{ ansible_interfaces['default_gateway'] }}</td>
               </tr>
             </tbody>
           </table>
