@@ -117,7 +117,7 @@
               <tr>
                 <td class="bordered-cell">{{ ansible_windows_domain }}</td>
                 <td class="bordered-cell">{{ ansible_windows_domain_role }}</td>
-                <td class="bordered-cell">{{ ansible_fqdn'] }}</td>
+                <td class="bordered-cell">{{ ansible_fqdn }}</td>
               </tr>
             </tbody>
           </table>
