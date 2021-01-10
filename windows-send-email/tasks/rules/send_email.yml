@@ -121,22 +121,6 @@
               </tr>
             </tbody>
           </table>
-          <table>
-            <thead>
-              <tr>
-                <th>Interface(s)</th>
-                <th>IP Address</th>
-                <th>Gateway</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="bordered-cell">{{ ansible_interfaces }}</td>
-                <td class="bordered-cell">{{ ansible_ip_addresses }}</td>
-                <td class="bordered-cell">{{ ansible_interfaces }}</td>
-              </tr>
-            </tbody>
-          </table>
         </section>
       </body>
       </html>
