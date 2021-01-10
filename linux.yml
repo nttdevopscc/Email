@@ -1,7 +1,10 @@
 - name: Sending email
   hosts: mysql_server
+  vars:
+    check_group_names:
+      - mysql_server
   ignore_errors: true
   ignore_unreachable: true
   roles:
-    - send-email
+    - linux-send-email
   become: yes

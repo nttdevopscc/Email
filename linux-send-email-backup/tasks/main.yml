@@ -1,0 +1,8 @@
+---
+- name: Gather Server Information
+  include_tasks: "{{ mail_rule_item }}"
+  loop:
+    - rules/server_information.yml
+    - rules/send_email.yml
+  loop_control:
+    loop_var: mail_rule_item

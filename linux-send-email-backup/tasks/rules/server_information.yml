@@ -1,0 +1,31 @@
+- name: Get the current disk information | Use%
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|loop|cdrom|none" | awk '{ print $5 }'
+  register: disk_use_out
+
+- name: Get the current disk information | Use% | Set fact
+  set_fact:
+    disk_use: "{{ disk_use_out.stdout_lines }}"
+
+- name: Get the current disk information | Filesystem
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|loop|cdrom|none" | awk '{ print $1 }'
+  register: disk_filesystem_out
+
+- name: Get the current disk information | Filesystem | Set fact
+  set_fact:
+    disk_filesystem: "{{ disk_filesystem_out.stdout_lines }}"
+
+- name: Get the current disk information | Mount on
+  shell: df -HP | grep -vE "^Filesystem|tmpfs|loop|cdrom|none" | awk '{ print $6 }'
+  register: disk_mount_out
+
+- name: Get the current disk information | Mount on | Set fact
+  set_fact:
+    disk_mount: "{{ disk_mount_out.stdout_lines }}"
+
+- name: Get MySQL service status
+  shell: systemctl status mysql
+  register: mysql_out
+
+- name: Get MySQL service status | Set fact
+  set_fact:
+    mysql_status: "{{ mysql_out.stdout_lines }}"
