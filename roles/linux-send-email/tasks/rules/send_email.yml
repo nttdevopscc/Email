@@ -176,4 +176,4 @@
       </body>
       </html>
     secure: starttls
-  delegate_to: ansible-server
+  delegate_to: localhost
