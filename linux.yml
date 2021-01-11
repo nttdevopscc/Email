@@ -1,8 +1,8 @@
 - name: Sending email
-  hosts: mysql_server
+  hosts: device_roles_db-tier
   vars:
     check_group_names:
-      - mysql_server
+      - device_roles_db-tier
   ignore_errors: true
   ignore_unreachable: true
   roles:
