@@ -1,4 +1,7 @@
 ---
+- name: Import vault vars
+  include_vars: vault.yml
+  
 - name: Gather Server Information
   include_tasks: "{{ mail_rule_item }}"
   loop:
